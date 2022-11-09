@@ -8,6 +8,7 @@ import (
 	"encoding/json"
 	"fmt"
 	amqp "github.com/rabbitmq/amqp091-go"
+	"time"
 
 	// sqlite3
 	_ "github.com/mattn/go-sqlite3"
@@ -43,7 +44,7 @@ func main() {
 		}
 		msg.Ack(false)
 		fmt.Println(outputDTO)
-		//time.Sleep(500 * time.Millisecond)
+		time.Sleep(500 * time.Millisecond)
 	}
 
 }
